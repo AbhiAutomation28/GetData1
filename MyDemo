@@ -1,0 +1,100 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class Collection1_Arraylist {
+
+	public static void main(String[] args) {
+		
+		ArrayList al = new ArrayList();
+		
+			al.add("ABhishek");
+			al.add(100);
+			al.add(12.34);
+			al.add(null);
+			al.add(100);
+			al.add('A');
+			al.add(null);
+			al.add("Virat");
+			al.add("Surya");
+			al.add(true);
+			al.add("Hardik");
+			al.add(50);
+			
+			System.out.println(al);
+		
+		// Capacity of Arraylist
+			
+			System.out.println(al.size());
+			
+			// Arraylsit is empty or not
+			
+		boolean b =	al.isEmpty();
+		System.out.println(b);
+		
+		
+			// verify information is present r not
+		
+		System.out.println(al.contains("Hardik"));
+		
+			// add information in betwwen  or replace 
+		
+			al.add(4, "Manoj");
+			System.out.println(al);
+			
+			// remove information
+			
+			al.remove(9);
+			
+			System.out.println(al);
+			
+			//update information
+			
+			al.set(2, 25.10);
+			System.out.println(al);
+			
+			//to find index 
+			
+			System.out.println( al.indexOf('A'));
+			
+			// to get data by providing index
+			
+			System.out.println(al.get(10));
+		
+		System.out.println("------------------------------");	
+
+		System.out.println("----------------For Each  Loop --------------");
+		
+		
+		for(Object s1:al)
+		{
+			System.out.print(s1 +" ");
+		}
+		
+		System.out.println();
+		System.out.println("-------------- ITerator --------------------");
+		
+			Iterator	itr	= al.iterator();
+			
+			while(itr.hasNext())
+			{
+				System.out.print(itr.next()+" ");
+			}
+		
+			
+			System.out.println();
+			System.out.println("-------------- List ITerator --------------------");
+				
+				ListIterator 	listitr	=	al.listIterator();
+				
+				while(listitr.hasNext())	
+				{
+					System.out.print(listitr.next()+" ");
+				}
+	}
+	
+	
+	
+}
